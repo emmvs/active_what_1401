@@ -1,9 +1,9 @@
-class CreateUsers < ActiveRecord::Migration[7.0]
+class CreatePokemons < ActiveRecord::Migration[7.0]
   def change
-    create_table :users do |t|
-      t.string    :username
-      t.string    :email
-      t.timestamps # adds `created_at` and `updated_at`
+    create_table :pokemons do |t|
+      t.string    :name
+      t.string    :location
+      t.timestamps # adds both the created_at and updated_at
     end
   end
 end

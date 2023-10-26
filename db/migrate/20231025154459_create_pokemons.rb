@@ -1,10 +1,6 @@
-class CreatePokemons < ActiveRecord::Migration[7.0]
+class AddAttributesToPokemons < ActiveRecord::Migration[7.0]
   def change
-    create_table :pokemons do |t|
-      t.string    :name
-      t.string    :location
-      t.string    :move
-      t.timestamps
-    end
+    add_column :pokemons, :attack, :string
+    add_column :pokemons, :level, :integer, default: 0
   end
 end
